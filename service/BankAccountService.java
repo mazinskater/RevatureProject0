@@ -1,8 +1,8 @@
-package dao;
+package service;
 
 import model.BankAccountPojo;
 
-public interface BankAccountDao {
+public interface BankAccountService {
 	
 	BankAccountPojo addUser(BankAccountPojo bankAccountPojo); //create new user
 	
@@ -11,6 +11,5 @@ public interface BankAccountDao {
 	BankAccountPojo withdrawFunds(BankAccountPojo bankAccountPojo); //withdraw funds
 	
 	BankAccountPojo getFunds(int accountId); //display funds
-	
 
 }

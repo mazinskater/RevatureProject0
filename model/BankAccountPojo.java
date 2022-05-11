@@ -3,19 +3,33 @@ package model;
 public class BankAccountPojo {
 	
 	//private variables
+	private int accountId;
 	private String userName;
 	private String password;
-	private int funds;
+	private double funds;
 	
 	public BankAccountPojo() {
 		super();
 	}
-
-	public BankAccountPojo(String userName, String password, int funds) {
+	
+	
+	public BankAccountPojo(int accountId, String userName, String password, double funds) {
 		super();
+		this.accountId = accountId;
 		this.userName = userName;
 		this.password = password;
 		this.funds = funds;
+	}
+
+
+
+
+	public int getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
 	}
 
 	public String getUserName() {
@@ -34,19 +48,20 @@ public class BankAccountPojo {
 		this.password = password;
 	}
 
-	public int getFunds() {
+	public double getFunds() {
 		return funds;
 	}
 
-	public void setFunds(int funds) {
+	public void setFunds(double funds) {
 		this.funds = funds;
 	}
 
 	@Override
 	public String toString() {
-		return "BankAccountPojo [userName=" + userName + ", password=" + password + ", funds=" + funds + "]";
+		return "BankAccountPojo [accountId=" + accountId + ", userName=" + userName + ", password=" + password
+				+ ", funds=" + funds + "]";
 	}
-	
+
 	
 
 }
